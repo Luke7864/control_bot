@@ -7,7 +7,7 @@ listallow+=list(ascii_uppercase)
 listallow+=['_','-']
 listallow+=['1','2','3','4','5','6','7','8','9','0']
 
-make_key=input("api 통신에 사용할 비밀 KEY를 입력해주세요(디스코드 키 아님): \n")
+make_key=input("api 통신에 사용할 비밀 KEY를 입력해주세요(디스코드 Token 아님): \n")
 
 
 app=Flask(__name__)
