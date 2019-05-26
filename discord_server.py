@@ -3,13 +3,13 @@ import asyncio
 import requests
 
 client=discord.Client()
-client_secret_key=input("Input Client Secret Key: \n")
+client_secret_key=input("Input Discord Client Secret Key: \n")
 server_host=input("서버의 호스트 주소를 알려주세요(IP주소나 도메인(http나 https 입력금지)만 입력해주세요: \n")
 server_port=input("호스트의 SSH 서비스가 구동되는 포트를 알려주세요: \n")
-server_key=input("서버에서 작동하고 있는 api의 비밀 키를 입력해주세요: \n")
+server_key=input("서버에서 작동하고 있는 api의 비밀 키를 입력해주세요(디스코드 시크릿키아님): \n")
 print("\n\n_______________ST4RT_____________________")
 ssh_info=server_host+' : '+server_port
-api_url='http://'+server_host+':'+'7864/api?key='+server_key
+api_url='http://'+server_host+':'+'7864/api?key='+server_key()
 
 @client.event
 async def on_ready():
